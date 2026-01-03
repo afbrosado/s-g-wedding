@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Susana & Gonçalo</title>
+
+    <!-- Bootstrap CSS (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #F8F5F2;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .row > * {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .hero {
+            position: relative;
+        }
+
+        .hero-text {
+            color: #ffffff;
+            position: absolute;
+            z-index: 2;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .hero-names {
+            top: 30px;
+            left: 50px;
+        }
+
+        .hero-dates {
+            bottom: 30px;
+            right: 50px;
+        }
+
+        .hero-photo {
+            width: 100%;
+            height: auto;
+        }
+
+        .header {
+            color: #6B4F4F;
+        }
+
+        .timer-grid {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .timer-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            width: 80px;
+            padding: 1rem;
+        }
+
+        .timer-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #A68A7A;
+        }
+
+        .timer-label {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #1F1A1A;
+        }
+
+        .description {
+            color: #1F1A1A;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid black;
+        }
+
+        .location-wrap {
+            background-color: #E3D5CA;
+        }
+
+        .quinta-photo {
+            max-width: 500px;
+            max-height: 350px;
+            width: 100%;
+            height: 350px;
+        }
+
+        .maps-iframe {
+            border: 0;
+            max-width: 500px;
+            height: 350px;
+            width: 100%;
+        }
+
+        @media (max-width: 575.98px) {
+            .contact-item:nth-of-type(-n+2) {
+                border-bottom: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="row">
+        <!-- Hero Header -->
+        <div class="col-sm-12 col-md-8 offset-md-2 p-0 hero">
+            <img src="couple1.jpg" alt="couple-photo" class="hero-photo"/>
+            <span class="hero-text hero-names">Susana & Gonçalo</span>
+            <span class="hero-text hero-dates">16.10.2026</span>
+        </div>
+
+        <!-- Timer Section -->
+        <div class="col-sm-12 justify-content-center p-0 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="text-muted header">SAVE THE DATE</h3>
+                </div>
+
+                <div class="col-12 mt-4 d-flex justify-content-center timer-grid">
+                    <div class="timer-box">
+                        <div id="days" class="timer-value">0</div>
+                        <div class="timer-label">Dias</div>
+                    </div>
+                    <div class="timer-box">
+                        <div id="hours" class="timer-value">0</div>
+                        <div class="timer-label">Horas</div>
+                    </div>
+                    <div class="timer-box">
+                        <div id="minutes" class="timer-value">0</div>
+                        <div class="timer-label">Minutos</div>
+                    </div>
+                    <div class="timer-box">
+                        <div id="seconds" class="timer-value">0</div>
+                        <div class="timer-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Text-->
+        <div class="col-12 mt-5 mb-5 px-5 description">
+            <p>Caros familia, amigos e javalis,</p>
+            <p>É com imensa alegria que vos convidamos para o nosso casamento.</p>
+            <p>Neste dia em que celebramos o amor que nos uniu e iniciamos uma nova família, ficaríamos muito felizes se
+                pudéssemos contar convosco.</p>
+            <p>
+                Com este passo importante, uniremos as nossas vidas e corações e gostaríamos muito que estivessem
+                presentes, neste dia tão especial, para celebrarmos juntos o amor e a felicidade que nos une.
+            </p>
+            <p>Guardem esta data nas vossas agendas e corações, pois teremos todo o gosto em contar com a presença de
+                cada um.</p>
+            <p>Aqui podem encontrar algumas informações relativas a este nosso dia. Agradecemos a vossa confirmação, até
+                dia 31 de Abril de 2026.</p>
+            <span>Com carinho</span>
+            <br/>
+            <span>Susana e Gonçalo</span>
+        </div>
+
+        <!--Location-->
+        <div class="col-12 pb-4 location-wrap">
+            <div class=row>
+                <div class="col-12 pt-4 mb-2 text-center">
+                    <h2 class="mb-2 mb-md-4 header">Localizaçao</h2>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column align-items-end pe-md-5">
+                    <div class="text-center">
+                        <img src="quinta.webp" alt="quinta-photo" class="quinta-photo"/>
+                        <p class="mt-1 mb-4 mb-md-0">Quinta do Coração, Vila Franca de Xira</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-start ps-md-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.5994235990283!2d-9.011492023486536!3d38.95597874324454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1927e169ab253d%3A0xbb3a6b144f0b0c1c!2sQuinta%20do%20Cora%C3%A7%C3%A3o%20-%20Grupo%20MS!5e0!3m2!1spt-PT!2spt!4v1762258695467!5m2!1spt-PT!2spt"
+                            class="maps-iframe"
+                            allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!--Contacts-->
+        <div class="col-12 mt-5 p-0">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="header">CONTACTOS</h2>
+                </div>
+                <div class="col-12 mt-3 p-0">
+                    <div class="row">
+                        <div class="col-12 col-md-4 text-center contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>Susana</span>
+                            <span>96XXXXXXX</span>
+                        </div>
+                        <div class="col-12 col-md-4 text-center contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>Gonçalo</span>
+                            <span>92XXXXXXX</span>
+                        </div>
+                        <div class="col-12 col-md-4 text-center contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <span>susana@susana.com</span>
+                            <span>gonçalo@gonçalo.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="row p-4 mt-4">
+            <div class="col-5 pl-2 d-none d-md-block">
+                Susana & Gonçalo
+            </div>
+
+            <div class="col-12 col-md-7">
+                Para qualquer esclarecimento podem contactar os noivos
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Bootstrap JS bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Countdown Timer Script -->
+<script>
+  const targetDate = new Date("October 12, 2026 00:00:00").getTime();
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+      clearInterval(timerInterval);
+      document.getElementById("days").textContent = 0;
+      document.getElementById("hours").textContent = 0;
+      document.getElementById("minutes").textContent = 0;
+      document.getElementById("seconds").textContent = 0;
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }
+
+  const timerInterval = setInterval(updateTimer, 1000);
+  updateTimer();
+</script>
+</body>
+</html>
