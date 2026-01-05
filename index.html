@@ -32,27 +32,45 @@
             position: relative;
         }
 
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                    135deg,
+                    rgba(0, 0, 0, 0.45) 0%,
+                    rgba(0, 0, 0, 0.25) 25%,
+                    rgba(0, 0, 0, 0.05) 50%,
+                    rgba(0, 0, 0, 0) 70%
+            );
+            z-index: 1;
+        }
+
         .hero-text {
             color: #ffffff;
             position: absolute;
             z-index: 2;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 25px;
+            font-family: 'Libre Baskerville', serif;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
         }
 
         .hero-names {
             top: 30px;
-            left: 50px;
+            left: 20px;
         }
 
         .hero-dates {
             bottom: 30px;
-            right: 50px;
+            right: 20px;
         }
 
         .hero-photo {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .header {
@@ -89,6 +107,7 @@
 
         .description {
             color: #1F1A1A;
+            letter-spacing: 0.3px;
         }
 
         .contact-item {
@@ -123,25 +142,42 @@
                 border-bottom: 0 !important;
             }
         }
+
+        @media (min-width: 768px) {
+            .hero {
+                height: 70vh;
+                max-height: 800px;
+            }
+
+            .hero-text {
+                font-size: 70px;
+                font-weight: 500;
+            }
+
+            .hero-names {
+                left: 50px;
+            }
+
+            .hero-dates {
+                right: 50px;
+            }
+        }
+
     </style>
 </head>
 <body>
 <main>
     <div class="row">
         <!-- Hero Header -->
-        <div class="col-sm-12 col-md-8 offset-md-2 p-0 hero">
-            <img src="couple1.jpg" alt="couple-photo" class="hero-photo"/>
+        <div class="col-sm-12 col-md-10 offset-md-1 p-0 hero">
+            <img src="couple.jpeg" alt="couple-photo" class="hero-photo"/>
             <span class="hero-text hero-names">Susana & Gonçalo</span>
-            <span class="hero-text hero-dates">16.10.2026</span>
+            <span class="hero-text hero-dates">12.9.2026</span>
         </div>
 
         <!-- Timer Section -->
         <div class="col-sm-12 justify-content-center p-0 mt-5">
             <div class="row">
-                <div class="col-12 text-center">
-                    <h3 class="text-muted header">SAVE THE DATE</h3>
-                </div>
-
                 <div class="col-12 mt-4 d-flex justify-content-center timer-grid">
                     <div class="timer-box">
                         <div id="days" class="timer-value">0</div>
@@ -165,28 +201,23 @@
 
         <!--Text-->
         <div class="col-12 mt-5 mb-5 px-5 description">
-            <p>Caros familia, amigos e javalis,</p>
-            <p>É com imensa alegria que vos convidamos para o nosso casamento.</p>
-            <p>Neste dia em que celebramos o amor que nos uniu e iniciamos uma nova família, ficaríamos muito felizes se
-                pudéssemos contar convosco.</p>
-            <p>
-                Com este passo importante, uniremos as nossas vidas e corações e gostaríamos muito que estivessem
-                presentes, neste dia tão especial, para celebrarmos juntos o amor e a felicidade que nos une.
-            </p>
-            <p>Guardem esta data nas vossas agendas e corações, pois teremos todo o gosto em contar com a presença de
-                cada um.</p>
-            <p>Aqui podem encontrar algumas informações relativas a este nosso dia. Agradecemos a vossa confirmação, até
-                dia 31 de Abril de 2026.</p>
-            <span>Com carinho</span>
+            <p>É com grande alegria que te convidamos a celebrar connosco um dos dias mais especiais das nossas vidas.</p>
+            <p>Depois de tantos momentos partilhados, decidimos dar o próximo passo e dizer “sim”, rodeados das pessoas que mais amamos. A tua presença será muito importante para tornar este dia ainda mais memorável.</p>
+            <span>Agora só falta saber se vens! 😊</span>
             <br/>
-            <span>Susana e Gonçalo</span>
+            <span>Confirma a tua presença até 30 de junho</span>
+            <br/><br/>
+            <span>Começamos às 15h com a cerimónia civil, que terá lugar na própria quinta.</span>
+            <br/>
+            <br/>
+            <span>Após a cerimónia: cocktail, jantar, surpresas e muita festa até ao fim 🎉</span>
         </div>
 
         <!--Location-->
         <div class="col-12 pb-4 location-wrap">
             <div class=row>
                 <div class="col-12 pt-4 mb-2 text-center">
-                    <h2 class="mb-2 mb-md-4 header">Localizaçao</h2>
+                    <h2 class="mb-2 mb-md-4 header">Localização</h2>
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column align-items-end pe-md-5">
                     <div class="text-center">
@@ -249,7 +280,7 @@
 
 <!-- Countdown Timer Script -->
 <script>
-  const targetDate = new Date("October 12, 2026 00:00:00").getTime();
+  const targetDate = new Date("September 12, 2026 00:00:00").getTime();
 
   function updateTimer() {
     const now = new Date().getTime();
