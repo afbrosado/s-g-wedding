@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
     <style>
@@ -108,6 +111,7 @@
         .description {
             color: #1F1A1A;
             letter-spacing: 0.3px;
+            font-family: 'Libre Baskerville', serif;
         }
 
         .contact-item {
@@ -117,6 +121,7 @@
             align-items: center;
             padding: 12px;
             border: 1px solid black;
+            font-family: 'Libre Baskerville', serif;
         }
 
         .location-wrap {
@@ -137,7 +142,11 @@
             width: 100%;
         }
 
-        @media (max-width: 575.98px) {
+        .footer {
+            font-size: 12px;
+        }
+
+        @media (max-width: 767px) {
             .contact-item:nth-of-type(-n+2) {
                 border-bottom: 0 !important;
             }
@@ -160,6 +169,10 @@
 
             .hero-dates {
                 right: 50px;
+            }
+
+            .footer {
+                padding-left: 0 !important;
             }
         }
 
@@ -203,14 +216,10 @@
         <div class="col-12 mt-5 mb-5 px-5 description">
             <p>É com grande alegria que te convidamos a celebrar connosco um dos dias mais especiais das nossas vidas.</p>
             <p>Depois de tantos momentos partilhados, decidimos dar o próximo passo e dizer “sim”, rodeados das pessoas que mais amamos. A tua presença será muito importante para tornar este dia ainda mais memorável.</p>
-            <span>Agora só falta saber se vens! 😊</span>
-            <br/>
-            <span>Confirma a tua presença até 30 de junho</span>
-            <br/><br/>
-            <span>Começamos às 15h com a cerimónia civil, que terá lugar na própria quinta.</span>
-            <br/>
-            <br/>
-            <span>Após a cerimónia: cocktail, jantar, surpresas e muita festa até ao fim 🎉</span>
+            <p>Agora só falta saber se vens! 😊</p>
+            <p>Confirma a tua presença até 30 de junho</p>
+            <p>Começamos às 15h com a cerimónia civil, que terá lugar na própria quinta.</p>
+            <p>Após a cerimónia: cocktail, jantar, surpresas e muita festa até ao fim 🎉</p>
         </div>
 
         <!--Location-->
@@ -238,7 +247,7 @@
         <div class="col-12 mt-5 p-0">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="header">CONTACTOS</h2>
+                    <h2 class="header">Contactos</h2>
                 </div>
                 <div class="col-12 mt-3 p-0">
                     <div class="row">
@@ -263,12 +272,12 @@
         </div>
 
         <!--Footer-->
-        <div class="row p-4 mt-4">
-            <div class="col-5 pl-2 d-none d-md-block">
+        <div class="row p-4 pb-2 mt-md-4 footer">
+            <!--<div class="col-5 pl-2 d-none d-md-block">
                 Susana & Gonçalo
-            </div>
+            </div>-->
 
-            <div class="col-12 col-md-7">
+            <div class="col-12">
                 Para qualquer esclarecimento podem contactar os noivos
             </div>
         </div>
