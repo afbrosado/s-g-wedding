@@ -11,9 +11,10 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
     <style>
@@ -55,18 +56,15 @@
             z-index: 2;
             font-weight: 600;
             font-size: 25px;
-            font-family: 'Libre Baskerville', serif;
+            font-family: "Playfair Display", serif;
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
         }
-
-        .hero-names {
-            top: 25px;
-            left: 20px;
-        }
-
         .hero-dates {
             bottom: 30px;
             right: 20px;
+            font-size: 40px;
+            font-family: "Playfair Display", serif;
+            letter-spacing: 2px;
         }
 
         .hero-photo {
@@ -77,6 +75,16 @@
         }
 
         .header {
+            color: #6B4F4F;
+            font-family: "Playfair Display", serif;
+            font-weight: 600;
+        }
+
+        .names {
+            font-weight: 600;
+            font-size: 72px;
+            letter-spacing: 10px;
+            font-family: "Great Vibes", cursive;
             color: #6B4F4F;
         }
 
@@ -106,12 +114,13 @@
             text-transform: uppercase;
             font-size: 12px;
             color: #1F1A1A;
+            font-family: "Lato", sans-serif;
         }
 
         .description {
             color: #1F1A1A;
             letter-spacing: 0.3px;
-            font-family: 'Libre Baskerville', serif;
+            font-family: "Lato", sans-serif;
         }
 
         .contact-item {
@@ -121,12 +130,13 @@
             align-items: center;
             padding: 12px;
             border: 1px solid #6B4F4F;
-            font-family: 'Libre Baskerville', serif;
+            font-family: "Lato", sans-serif;
             color: #6B4F4F;
         }
 
         .location-wrap {
             background-color: #E3D5CA;
+            font-family: "Lato", sans-serif;
         }
 
         .quinta-photo {
@@ -148,6 +158,17 @@
         }
 
         @media (max-width: 767px) {
+            .hero-dates {
+                bottom: 10px;
+                right: 5px;
+                font-size: 32px;
+            }
+
+            .names {
+                font-size: 42px;
+                letter-spacing: 3px;
+            }
+
             .contact-item:nth-of-type(-n+1) {
                 border-bottom: 0 !important;
             }
@@ -179,10 +200,6 @@
                 font-weight: 500;
             }
 
-            .hero-names {
-                left: 50px;
-            }
-
             .hero-dates {
                 right: 50px;
             }
@@ -200,12 +217,16 @@
         <!-- Hero Header -->
         <div class="col-sm-12 col-md-10 offset-md-1 p-0 hero">
             <img src="couple.jpeg" alt="couple-photo" class="hero-photo"/>
-            <span class="hero-text hero-names">Susana & Gonçalo</span>
             <span class="hero-text hero-dates">12.9.2026</span>
         </div>
 
+        <!--Names-->
+        <div class="col-sm-12 text-center p-0 mt-4">
+            <span class="names">Susana & Gonçalo</span>
+        </div>
+
         <!-- Timer Section -->
-        <div class="col-sm-12 justify-content-center p-0 mt-5">
+        <div class="col-sm-12 justify-content-center p-0">
             <div class="row">
                 <div class="col-12 mt-4 d-flex justify-content-center timer-grid">
                     <div class="timer-box">
@@ -230,8 +251,10 @@
 
         <!--Text-->
         <div class="col-12 mt-5 mb-5 px-5 description">
-            <p>É com grande alegria que te convidamos a celebrar connosco um dos dias mais especiais das nossas vidas.</p>
-            <p>Depois de tantos momentos partilhados, decidimos dar o próximo passo e dizer “sim”, rodeados das pessoas que mais amamos. A tua presença será muito importante para tornar este dia ainda mais memorável.</p>
+            <p>É com grande alegria que te convidamos a celebrar connosco um dos dias mais especiais das nossas
+                vidas.</p>
+            <p>Depois de tantos momentos partilhados, decidimos dar o próximo passo e dizer “sim”, rodeados das pessoas
+                que mais amamos. A tua presença será muito importante para tornar este dia ainda mais memorável.</p>
             <p>Agora só falta saber se vens! 😊</p>
             <p>Confirma a tua presença até 30 de junho</p>
             <p>Começamos às 15h com a cerimónia civil, que terá lugar na própria quinta.</p>
@@ -277,26 +300,26 @@
                             <span>Gonçalo</span>
                             <span>931128045</span>
                         </div>
-                       <!-- <div class="col-12 col-md-4 text-center contact-item">
-                            <i class="bi bi-envelope"></i>
-                            <span>susana@susana.com</span>
-                            <span>gonçalo@gonçalo.com</span>-->
-                        </div>
+                        <!-- <div class="col-12 col-md-4 text-center contact-item">
+                             <i class="bi bi-envelope"></i>
+                             <span>susana@susana.com</span>
+                             <span>gonçalo@gonçalo.com</span>-->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!--Footer-->
-        <div class="row pt-3 pb-2 mt-md-4 footer">
-            <!--<div class="col-5 pl-2 d-none d-md-block">
-                Susana & Gonçalo
-            </div>-->
+    <!--Footer-->
+    <div class="row pt-3 pb-2 mt-md-4 footer">
+        <!--<div class="col-5 pl-2 d-none d-md-block">
+            Susana & Gonçalo
+        </div>-->
 
-            <div class="col-12">
-                Para qualquer esclarecimento podem contactar os noivos
-            </div>
+        <div class="col-12">
+            Para qualquer esclarecimento podem contactar os noivos
         </div>
+    </div>
     </div>
 </main>
 
